@@ -179,8 +179,8 @@ rm(KobeBryant_G, JoeJohnson_G, LeBronJames_G, CarmeloAnthony_G, DwightHoward_G,
 colnames(games) <- Seasons
 rownames(games) <- Players
 
-basketball_plot <- function(data, rows=1:10) {
-  Data <- data[rows,,drop=F]
+basketball_plot <- function(matrix, rows=1:10) {
+  Data <- matrix[rows,,drop=F]
   matplot(t(Data), type="b", pch=15:18, col=c(1:4,6), cex=0.60, main="Basketball Player Analysis")
   legend("bottomleft", inset=0.01, cex=0.60, legend=Players[rows], col=c(1:4,6), pch=15:18, horiz=F)
 }
